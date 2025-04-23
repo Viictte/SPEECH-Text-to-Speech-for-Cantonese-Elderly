@@ -14,3 +14,5 @@ with the tonal balance, pacing, and clarity preferences articulated by elderly u
 data processing pipeline with feedback-driven optimization, SPEECH delivers culturally relevant,
 personalized, and intelligible speech that addresses the unique communication needs of the elderly
 Cantonese-speaking community.
+
+Dataset: [viictte/Elderly-Cantonese](https://huggingface.co/datasets/viictte/Elderly-Cantonese/tree/main)
