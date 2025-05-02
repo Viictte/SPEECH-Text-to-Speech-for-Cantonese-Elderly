@@ -22,27 +22,27 @@
 ---
 
 ## 📂 Repository Structure
+```text
+.
 ├── README.md
 ├── LICENSE
 ├── config/
 │   └── 2023_08_23_reproduce_audioldm/
-│       └── train_ecas_dpo.yaml      # Experimental configuration
+│       └── train_ecas_dpo.yaml       # Experimental configuration
 ├── data/
-│   └── metadata/                     # Dataset metadata
-├── loss/                             # Subjective metric implementations
-├── metrics/                          # Objective & subjective metric code
+│   └── metadata/                      # Dataset metadata
+├── loss/                              # Subjective metric implementations
+├── metrics/                           # Objective & subjective metric code
 │   └── subjective_metrics.py
-├── preprocessing/                    # Data preprocessing pipelines
+├── preprocessing/                     # Data preprocessing pipelines
 │   ├── transcribe_whisper.py
 │   ├── segment_rules.py
 │   └── convert_to_audiocaps.py
 └── src/
-├── autoencoder.py                # VAE definition
-├── latent_diffusion.py           # Latent diffusion model
-├── ldm_ecas_dpo.py               # ECAS & DPO loss implementations
-└── train_ecas_dpo.py             # Training script
-
----
+    ├── autoencoder.py                # VAE definition
+    ├── latent_diffusion.py           # Latent diffusion model
+    ├── ldm_ecas_dpo.py               # ECAS & DPO loss implementations
+    └── train_ecas_dpo.py             # Training script
 
 ## 📈 Dataset
 
