@@ -43,7 +43,7 @@
     ├── latent_diffusion.py           # Latent diffusion model
     ├── ldm_ecas_dpo.py               # ECAS & DPO loss implementations
     └── train_ecas_dpo.py             # Training script
-
+```
 ## 📈 Dataset
 
 Our self-collected and augmented **Elderly Cantonese Speech Dataset** (≈ 12 020 clips, 26 GB) is publicly available:
@@ -71,16 +71,21 @@ python src/train_ecas_dpo.py \
   --config_yaml config/2023_08_23_reproduce_audioldm/train_ecas_dpo.yaml
 
 ```
- 🧮 Metrics
-	•	Objective
-	•	Frechet Audio Distance (FAD)
-	•	Inception Score (IS)
-	•	Kullback–Leibler Divergence (KL)
-	•	Subjective
-	•	Overall Quality (OVL): 1–100 scale
-	•	Relevance to Text (REL): 1–100 scale
+## 🧮 Metrics
 
-🤝 Acknowledgments
-	•	Whisper for robust transcription
-	•	AudioLDM and NaturalSpeech 2 for latent diffusion inspiration
-	•	DPO framework for human-in-the-loop optimization
+- **Objective**
+  - Frechet Audio Distance (FAD)
+  - Inception Score (IS)
+  - Kullback–Leibler Divergence (KL)
+
+- **Subjective**
+  - Overall Quality (OVL): 1–100 scale
+  - Relevance to Text (REL): 1–100 scale
+
+---
+
+## 🤝 Acknowledgments
+
+- Whisper for robust transcription  
+- AudioLDM and NaturalSpeech 2 for latent diffusion inspiration  
+- DPO framework for human-in-the-loop optimization  
