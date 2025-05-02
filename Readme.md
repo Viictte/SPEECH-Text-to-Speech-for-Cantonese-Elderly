@@ -62,9 +62,11 @@ Our self-collected and augmented **Elderly Cantonese Speech Dataset** (≈ 12 02
    cd SPEECH
 
 2. **Install dependencies**
+   ```python
    pip install -r requirements.txt
 
-3. **Train model**
+4. **Train model**
+ ```python
 python src/train_ecas_dpo.py \
   --config_yaml config/2023_08_23_reproduce_audioldm/train_ecas_dpo.yaml
 
