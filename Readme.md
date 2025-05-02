@@ -1,9 +1,9 @@
-Text-to-Speech (TTS) systems play a crucial role in improving communication accessibility for
+Text-to-speech (TTS) systems play a crucial role in improving communication accessibility for
 individuals with hearing impairments, particularly among elderly Cantonese speakers. However, two
 major challenges persist: (1) limited availability of high-quality Cantonese resources in comparison to
 Mandarin or English, and (2) insufficient personalization for elderly users, whose auditory preferences
 and cultural nuances often differ from the broader population. To address these challenges, we propose
-SPEECH, a specialized TTS framework that integrates a latent diffusion architecture to operate
+SPEECH is a specialized TTS framework that integrates a latent diffusion architecture to operate
 effectively with relatively small datasets and employs Direct Preference Optimization (DPO) to
 incorporate direct user feedback from elderly speakers. Our framework features two core components:
 Elderly-Centric Acoustic Supervisor (ECAS) and Direct Preference Optimization. ECAS focuses
@@ -15,4 +15,7 @@ data processing pipeline with feedback-driven optimization, SPEECH delivers cult
 personalized, and intelligible speech that addresses the unique communication needs of the elderly
 Cantonese-speaking community.
 
-Dataset: [viictte/Elderly-Cantonese](https://huggingface.co/datasets/viictte/Elderly-Cantonese/tree/main)
+1) Dataset can be found : [viictte/Elderly-Cantonese](https://huggingface.co/datasets/viictte/Elderly-Cantonese/tree/main)
+2) Data Preprocessing is in the folder which consists the a) transcribing with Whisper b) segmenting the dataset based on the three rules c) encoding the file names and converting to the AudioCap form for training purposes.
+3) The train folder consists of autoencoder.py latent_diffusion.py ldm_ecas_dpo.py train_ecas_dpo.py. The ldm_ecas_dpo.py compiles the core calculation of ECAS and DPO losses and the train_ecas_dpo.py is the training script.
+4) The calculation of the subjective metrics is in the loss folder.
