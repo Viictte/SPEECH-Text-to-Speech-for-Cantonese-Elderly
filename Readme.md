@@ -24,25 +24,28 @@
 ## 📂 Repository Structure
 ```text
 .
+SPEECH-Text-to-Speech-for-Cantonese-Elderly/
 ├── README.md
 ├── LICENSE
 ├── config/
 │   └── 2023_08_23_reproduce_audioldm/
-│       └── train_ecas_dpo.yaml       # Experimental configuration
-├── data/
-│   └── metadata/                      # Dataset metadata
-├── loss/                              # Subjective metric implementations
-├── metrics/                           # Objective & subjective metric code
-│   └── subjective_metrics.py
-├── preprocessing/                     # Data preprocessing pipelines
-│   ├── transcribe_whisper.py
-│   ├── segment_rules.py
-│   └── convert_to_audiocaps.py
-└── src/
-    ├── autoencoder.py                # VAE definition
-    ├── latent_diffusion.py           # Latent diffusion model
-    ├── ldm_ecas_dpo.py               # ECAS & DPO loss implementations
-    └── train_ecas_dpo.py             # Training script
+│       └── train_ecas_dpo.yaml           # Experimental configuration
+├── Data Preprocessing/
+│   ├── transcribe_whisper.py             # Whisper-based transcription
+│   └── segment_rules.py                  # Punctuation & silence segmentation
+├── losses/
+│   └── subjective_metrics.py             # MOS / OVL / REL computation
+├── train/
+│   ├── ldm_ecas_dpo.py                   # ECAS & DPO loss implementations
+│   └── train_ecas_dpo.py                 # Main training script
+├── utilities/
+│   ├── conditional_models.py             # CLAP & other conditioners
+│   ├── dataset_plugin.py                 # AudioDataset wrapper
+│   ├── eval.py                           # Objective metric evaluation
+│   └── infer.py                          # Inference / synthesis routines
+├── autoencoder.py                        # VAE definition (from src/)
+├── latent_diffusion.py                   # Latent diffusion core model
+└── train_ecas_dpo.py                     # (alias in root for training)
 ```
 ## 📈 Dataset
 
