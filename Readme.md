@@ -16,6 +16,11 @@ personalized, and intelligible speech that addresses the unique communication ne
 Cantonese-speaking community.
 
 1) Dataset can be found : [viictte/Elderly-Cantonese](https://huggingface.co/datasets/viictte/Elderly-Cantonese/tree/main)
+
+<img width="844" alt="Screenshot 2025-05-02 at 13 46 39" src="https://github.com/user-attachments/assets/6db9fc5a-d665-4f9f-8688-1785601b46b8" />
+   
 2) Data Preprocessing is in the folder which consists the a) transcribing with Whisper b) segmenting the dataset based on the three rules c) encoding the file names and converting to the AudioCap form for training purposes.
+   
 3) The train folder consists of autoencoder.py latent_diffusion.py ldm_ecas_dpo.py train_ecas_dpo.py. The ldm_ecas_dpo.py compiles the core calculation of ECAS and DPO losses and the train_ecas_dpo.py is the training script.
-4) The calculation of the subjective metrics is in the loss folder.
+4) The experimental configuration can be found in : config/2023_08_23_reproduce_audioldm/train_ecas_dpo.yaml
+5) The calculation of the subjective metrics is in the loss folder.
